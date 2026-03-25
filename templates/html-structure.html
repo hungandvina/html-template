@@ -7,6 +7,7 @@
   - Apply to the absolute last item in content-box (last con-box).
   - Apply to the absolute last item in con-box (last con-box02).
   - Apply to the absolute last item in con-box02 (last con-box03).
+  - SPECIAL CASE: If 'p.con-p' is the last item in a box, it must have 'no-pd' (e.g., <p class="con-p no-pd">).
 -->
 <div class="content-box">
   <!-- PRIMARY SECTION (CON-BOX) -->
@@ -40,26 +41,14 @@
     </div>
   </div>
 
-  <!-- ABSOLUTE LAST CON-BOX -> no-pd -->
+  <!-- SECTION WITH PARAGRAPH CASE -->
   <div class="con-box no-pd">
     <h4 class="h4-tit01">Title H4</h4>
-    <div class="con-box02">
-      <h5 class="h5-tit01">Title H5</h5>
-      <div class="con-box03">
-        <h6 class="h6-tit01">Title H6</h6>
-      </div>
-      <div class="con-box03 no-pd">
-        <h6 class="h6-tit01">Title H6</h6>
-      </div>
-    </div>
     <div class="con-box02 no-pd">
-      <h5 class="h5-tit01">Title H5</h5>
-      <div class="con-box03">
-        <h6 class="h6-tit01">Title H6</h6>
-      </div>
-      <div class="con-box03 no-pd">
-        <h6 class="h6-tit01">Title H6</h6>
-      </div>
+      <h5 class="h5-tit01">Selection criteria</h5>
+      <p class="con-p">This is a normal paragraph with bottom padding.</p>
+      <!-- LAST con-p ITEM -> no-pd -->
+      <p class="con-p no-pd">This is the final paragraph in the box, so it uses no-pd.</p>
     </div>
   </div>
 </div>
