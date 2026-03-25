@@ -1,0 +1,182 @@
+[
+  {
+    "code": "AI590",
+    "title": "AI Graduate Seminar 세미나",
+    "desc": "The purpose of this course is to extend knowledge to the state-of-the-art R&D level by invited talks of the experts in various related scientific or engineering fields, and also possibly by presentations of the students in the course to exchange their own ideas and updated information for creative and fine-tuned achievements."
+  },
+  {
+    "code": "AI690",
+    "title": "Master's Research 석사논문연구",
+    "desc": "This course is related to the student's graduate thesis and dissertation. As such, students should be actively working in a laboratory setting and gaining experience through hands-on experimentation."
+  },
+  {
+    "code": "AI890",
+    "title": "Doctoral Research 박사논문연구",
+    "desc": "This course is related to the student's graduate thesis and dissertation. As such, students should be actively working in a laboratory setting and gaining experience through hands-on experimentation."
+  },
+  {
+    "code": "AI501",
+    "title": "Introduction to AI 인공지능학 개론",
+    "desc": "This is a subject that provides an overview of the general AI and graduate courses. Supervised learning / unsupervised learning / reinforced learning. Generative Model. Interpretability, Explainable AI, Causal Learning, Meta Learning, Federated Learning, Robot Learning."
+  },
+  {
+    "code": "AI502",
+    "title": "Principles of Deep Learning 딥러닝 원론",
+    "desc": "This course aims to learn about basic principles of deep learning (deep learning architecture and learning methodology). Backpropagation, SGD optimization, and regularization."
+  },
+  {
+    "code": "AI503",
+    "title": "AI Toolkits AI 툴킷",
+    "desc": "This course aims to learn about basic mathematical knowledge for understanding AI models and how to use Python (the most widely used programming language/environment, in AI). Overview of computer science to understand and implement algorithms. Introduction to linear algebra/probability/statistics and how to use software libraries such as Numpy, Scipy, TensorFlow, PyTorch, etc."
+  },
+  {
+    "code": "AI511",
+    "title": "Optimization for AI 인공지능 최적화",
+    "desc": "This course aims to learn about optimization techniques that are used in AI research. Convex optimization, submodular optimization. Stochastic optimization, Bayesian optimization."
+  },
+  {
+    "code": "AI512",
+    "title": "Reinforcement Learning 강화 학습",
+    "desc": "Reinforcement learning is a promising area in artificial intelligence research. This course will deal with an introduction to the field of reinforcement learning, and students will learn about the core theories and algorithms. Also, students will improve their understanding through a final project. At the end of this course, students will understand core theories in reinforcement learning and implement algorithms for real applications."
+  },
+  {
+    "code": "AI513",
+    "title": "Learning Theory 학습 이론",
+    "desc": "This course aims to learn about the classical machine learning algorithms and their theory. Information theory, statistical machine learning. PAC learning, VC dimension, Boosting, Bagging. GLM, CART, Random Forest, SVM, PGM."
+  },
+  {
+    "code": "AI514",
+    "title": "Big Data Analysis 빅데이터 분석",
+    "desc": "This module aims to help students understand and develop systems for analyzing big data. During the course, the students will explore text mining, graph mining, and recommender system. Techniques for acquisition, pre-processing, preparation of large-scale data. Data visualization."
+  },
+  {
+    "code": "AI515",
+    "title": "Distributed Learning 분산 학습",
+    "desc": "This module aims to help students explore theoretical and practical aspects of 1) instantiating machine learning and deep learning frameworks in multi-CPU&GPU environments and 2) computation- and data-efficient inference."
+  },
+  {
+    "code": "AI516",
+    "title": "Computer Vision 컴퓨터 비전",
+    "desc": "In this course, we study how to extract and analyze visual information from images and videos using computers. Topics may include the basic theories and deep learning applications for image formation, image processing, feature extraction, segmentation, object detection, and recognition."
+  },
+  {
+    "code": "AI517",
+    "title": "Deep Learning for NLP/NLU NLP/NLU 딥 러닝",
+    "desc": "This course aims to learn how to apply deep learning techniques to NLP, NLU problems. Machine learning techniques that extract pattern/knowledge from large-scale document data."
+  },
+  {
+    "code": "AI518",
+    "title": "Deep Generative Models 심층 생성 모델",
+    "desc": "This course aims to learn about the deep generative models that are used to synthesize and manipulate images. Variational Auto-Encoder (VAE)/Generative Adversarial Network (GAN)."
+  },
+  {
+    "code": "AI519",
+    "title": "Advanced Machine Learning Topics 고급 기계 학습 주제",
+    "desc": "This course will provide detailed treatment of advanced methods that are representative of the different categories of machine learning approaches: We will study convex/non-convex optimization and selected topics in probabilistic models, regularization techniques, and neural networks. At the end of this course, students will demonstrate a systematic knowledge of state-of-the-art machine learning approaches, develop and evaluate critically advanced machine learning models, and identify and implement appropriate algorithms to solve real-world problems."
+  },
+  {
+    "code": "AI520",
+    "title": "Machine Learning Fundamentals 기계 학습 기초",
+    "desc": "This course gives you better understanding of many concepts, techniques, and algorithms in machine learning, beginning with topics such as classification and linear regression and ending up with more state-of-the art topics such as deep learning. The course will give the student the basic ideas and intuition behind modern machine learning methods as well as a bit more formal understanding of how, why, and when they work. The underlying theme in the course is statistical inference as it provides the foundation for most of the methods covered."
+  },
+  {
+    "code": "AI531",
+    "title": "Knowledge Service Engineering 지식 서비스 공학",
+    "desc": "This course gives you better understanding of many concepts, techniques, and algorithms in machine learning, beginning with topics such as classification and linear regression and ending up with more state-of-the art topics such as deep learning. The course will give the student the basic ideas and intuition behind modern machine learning methods as well as a bit more formal understanding of how, why, and when they work. The underlying theme in the course is statistical inference as it provides the foundation for most of the methods covered."
+  },
+  {
+    "code": "AI532",
+    "title": "Advanced Information Visualization 고급 정보 시각화",
+    "desc": "In this course, we will learn information visualization techniques which allow users to analyze complex data. We also discuss recent visual analytics techniques and systems with a focus on understanding AI models."
+  },
+  {
+    "code": "AI533",
+    "title": "Advanced Quality Control 고급 품질 제어",
+    "desc": "The objective of this course is to teach fundamental methods about anomaly and change detection in a process or an environment. Topics covered include the univariate and multivariate analysis for continuous and discrete data, risk adjustments, data pre-analyses (such as dimension reduction), and profile monitoring."
+  },
+  {
+    "code": "AI534",
+    "title": "Advanced Additive Manufacturing 고등 적층 제조",
+    "desc": "This course introduces the contemporary research topics and applications of additive manufacturing (AM) technologies. The systematic AM process from design to manufacturing is examined comprehensively. Students will also learn the concept of 'Design for Additive Manufacturing (DFAM)' with practice using the various / up-to-date AM resources (HW/SW) in the UNIST 3D printing research center."
+  },
+  {
+    "code": "AI535",
+    "title": "Robotics 로봇학",
+    "desc": "This course introduces topics related to algorithms in robot control, estimation, planning, decision making, navigation, perception, and learning. Students are encouraged to apply algorithms to their real robots as the final project (if they have), but the course focuses on algorithmic and software portion in robotics."
+  },
+  {
+    "code": "AI551",
+    "title": "AI Accelerator Architectures AI 가속기 아키텍쳐",
+    "desc": "Traditional CPU and GPU became processing bottleneck as the AI algorithms rapidly advance. Therefore, today's computing system requires special computing platforms that are dedicated to AI algorithms. This course introduces computer architectures for AI acceleration and optimization techniques."
+  },
+  {
+    "code": "AI552",
+    "title": "AI Framework Design and Implementation AI 프레임 워크 설계 및 구현",
+    "desc": "This class will cover key concepts in systems supports for deep learning and machine learning workloads. The primary goal is understanding key properties of these workloads, learning the state-of-the-art system mechanisms and policies integrated in deep learning engines, and more importantly, figuring out how past research work made use of traditional big data processing technologies to improve performance, scalability, and programmability of deep learning applications. Still, there is an open question such that with rapid innovations in new deep learning algorithms and methodologies, how good systems work could come across with them to make synergistic impacts. This course will provide a partial answer of it."
+  },
+  {
+    "code": "AI553",
+    "title": "AI-based Computer System Optimization AI 기반 컴퓨터 시스템 최적화",
+    "desc": "This course introduces AI-based techniques for enhancing computer systems. This course covers AI-based optimization techniques that can be applied to key components (e.g., task schedulers and memory and storage managers) in computer systems in order to improve them in various ways such as performance, power/energy efficiency, and security."
+  },
+  {
+    "code": "AI554",
+    "title": "Semiconductor Devices for AI System AI 시스템 반도체 장치",
+    "desc": "In this class, focused on semiconductor devices such as basic computing architecture, memory devices and advanced neural devices, students are expected to acquire the knowledge and perspective of memory and neural device technologies along with basic understanding of computing and memory hierarchy."
+  },
+  {
+    "code": "AI555",
+    "title": "Optimizations for AI Systems AI 시스템 최적화",
+    "desc": "This course introduces architecture- and system-level techniques for design of efficient artificial intelligence systems. Topics may include neural processing architectures, compilation techniques, advanced deep neural networks, and model simplification methods."
+  },
+  {
+    "code": "AI701",
+    "title": "Probabilistic Graphical Model 확률적 그래픽 모델",
+    "desc": "This course aims to learn about diverse probabilistic graphical models based on the probability theory and optimization methods. Message passing, Game theory. Bayesian network, conditional random field."
+  },
+  {
+    "code": "AI702",
+    "title": "Meta & Multi-task Learning 메타 및 다중 작업 학습",
+    "desc": "This course aims to learn about the modern meta-learning and multi-task learning algorithms, and theoretical backgrounds for learning multiple tasks with data-scarcity. This course covers meta learning, multi-task learning, transfer learning and any other related learning techniques."
+  },
+  {
+    "code": "AI703",
+    "title": "Theory of Deep Learning 딥 러닝 이론",
+    "desc": "This course aims to learn about the theoretical understanding for the process and generalization ability of deep learning. Paper seminar."
+  },
+  {
+    "code": "AI704",
+    "title": "Machine Learning under Uncertainty 불확실에 기반한 기계 학습",
+    "desc": "This course aims to learn about the machine learning techniques that are based on uncertainty estimation. Active learning, Robust learning, Multi-armed bandit."
+  },
+  {
+    "code": "AI705",
+    "title": "Nonparametric Bayesian 비모수 베이지안",
+    "desc": "This course aims to learn about the recent Nonparametric bayesian learning techniques and its recent research trends. Dirichlet process, Gaussian process."
+  },
+  {
+    "code": "AI706",
+    "title": "3D Vision and Machine Perception 3D 비전 및 머신 퍼셉션",
+    "desc": "This course aims to study the fundamental knowledge on 3D vision (multiple view geometry) and learn about the deep learning methods that are dedicated to the 3D image processing and data learning. 3D reconstruction, Robotics, Self-driving, Detection/Segmentation."
+  },
+  {
+    "code": "AI707",
+    "title": "Deep Reinforcement Learning 심층 강화 학습",
+    "desc": "This is an in-depth course that aims to understand reinforcement learning algorithms using deep learning for applying to real-world problems. Projects using the OpenGym."
+  },
+  {
+    "code": "AI721",
+    "title": "Automated Machine Learning 자동화 기계 학습",
+    "desc": "This course aims to learn about the AutoML methods and their details that make algorithms learn by themselves without the intervention of the human engineers. Black-box optimization, AutoML techniques, NAS(Neural Architecture Search), AutoAugment."
+  },
+  {
+    "code": "AI722",
+    "title": "Causal Learning & Explainable AI 보편적 학습 및 설명 가능한 AI",
+    "desc": "In data science, it is essential to understand the causal relationship between variables as well as a high-performance prediction based on correlation. Causal learning is an emerging area in the machine learning, statistics, and artificial intelligence community. In this course, we will provide concepts, principles, and algorithms to deal with causal inference and causal discovery problems. Students will learn how to combine data and domain knowledge for causal reasoning, which is crucial in decision making science, e.g. medicine, education, and business administration."
+  },
+  {
+    "code": "AI723",
+    "title": "Deep Learning Research 딥 러닝 연구",
+    "desc": "This course aims to learn about the recent research trends and flows by reviewing recent deep learning papers."
+  }
+]

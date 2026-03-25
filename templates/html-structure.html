@@ -1,0 +1,65 @@
+<!-- 
+  Hierarchy Rule: con-box > h4 > con-box02 > h5 > con-box03 > h6
+  Note: Heading tags (h4, h5, h6) are OPTIONAL within their respective containers.
+  Padding Rule (no-pd):
+  - 'no-pd' must ONLY be used on the LAST sibling within its parent container.
+  - This prevents redundant bottom padding when a parent container already has padding.
+  - Apply to the absolute last item in content-box (last con-box).
+  - Apply to the absolute last item in con-box (last con-box02).
+  - Apply to the absolute last item in con-box02 (last con-box03).
+-->
+<div class="content-box">
+  <!-- PRIMARY SECTION (CON-BOX) -->
+  <div class="con-box">
+    <h4 class="h4-tit01">Title H4</h4>
+    
+    <!-- SUB-SECTION (CON-BOX02) -->
+    <div class="con-box02">
+      <h5 class="h5-tit01">Title H5</h5>
+      
+      <!-- DETAILED ROW (CON-BOX03) -->
+      <div class="con-box03">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+      
+      <!-- LAST SUB-ITEM -> no-pd -->
+      <div class="con-box03 no-pd">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+    </div>
+
+    <!-- LAST CON-BOX02 -> no-pd -->
+    <div class="con-box02 no-pd">
+      <h5 class="h5-tit01">Title H5</h5>
+      <div class="con-box03">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+      <div class="con-box03 no-pd">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABSOLUTE LAST CON-BOX -> no-pd -->
+  <div class="con-box no-pd">
+    <h4 class="h4-tit01">Title H4</h4>
+    <div class="con-box02">
+      <h5 class="h5-tit01">Title H5</h5>
+      <div class="con-box03">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+      <div class="con-box03 no-pd">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+    </div>
+    <div class="con-box02 no-pd">
+      <h5 class="h5-tit01">Title H5</h5>
+      <div class="con-box03">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+      <div class="con-box03 no-pd">
+        <h6 class="h6-tit01">Title H6</h6>
+      </div>
+    </div>
+  </div>
+</div>
