@@ -1,5 +1,5 @@
 ---
-description: Rules CMS
+trigger: always_on
 ---
 
 You are coding for a Korean client’s CMS using only HTML + CSS.
