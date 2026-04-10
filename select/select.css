@@ -1,0 +1,47 @@
+.pdf-tabs {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.pdf-tabs .box {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pdf-tabs .box span {
+  flex: 1;
+  display: block;
+  padding: 0 15px;
+  background: url(/_res/unist/me/img/content/pdf-tabs-arr.png) no-repeat center right 15px / 8px
+    auto;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: #333;
+}
+.pdf-tabs .box ul {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: -1px;
+  display: none;
+  width: 100%;
+  padding-top: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.pdf-tabs .box ul li a {
+  display: block;
+  padding: 0 15px 5px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: #333;
+}

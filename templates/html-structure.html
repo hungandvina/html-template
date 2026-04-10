@@ -1,6 +1,9 @@
 <!-- 
   Hierarchy Rule: con-box > h4 > con-box02 > h5 > con-box03 > h6
-  Note: Heading tags (h4, h5, h6) are OPTIONAL within their respective containers.
+  Note: Heading tags (h4, h5, h6) are OPTIONAL within their respective containers (con-box, con-box02, con-box03).
+  Tag Usage Rule:
+  - Typography classes MUST ONLY be used with their matching exact HTML tags (e.g., "h4-tit01" must only be on an <h4>).
+  - Do NOT use structural heading tags (h4, h5, h6) or classes (h4-tit01, etc.) for non-structural component text (like card titles or list items). For generic block titles, use a `<p class="custom-class">` and style it in style.css.
   Padding Rule (no-pd):
   - 'no-pd' must ONLY be used on the LAST sibling within its parent container.
   - This prevents redundant bottom padding when a parent container already has padding.
@@ -8,21 +11,27 @@
   - Apply to the absolute last item in con-box (last con-box02).
   - Apply to the absolute last item in con-box02 (last con-box03).
   - SPECIAL CASE: If 'p.con-p' is the last item in a box, it must have 'no-pd' (e.g., <p class="con-p no-pd">).
+
+  CRITICAL WARNING for 'no-pd':
+  - NEVER use 'no-pd' if another element (sibling) follows it at the same level.
+  - ONLY use 'no-pd' for the ABSOLUTE LAST element within its parent container.
+  - [WRONG]: <p class="con-p no-pd">Text</p> <p class="con-p">Next Text</p>
+  - [RIGHT]: <p class="con-p">Text</p> <p class="con-p no-pd">Final Text</p>
 -->
 <div class="content-box">
   <!-- PRIMARY SECTION (CON-BOX) -->
   <div class="con-box">
     <h4 class="h4-tit01">Title H4</h4>
-    
+
     <!-- SUB-SECTION (CON-BOX02) -->
     <div class="con-box02">
       <h5 class="h5-tit01">Title H5</h5>
-      
+
       <!-- DETAILED ROW (CON-BOX03) -->
       <div class="con-box03">
         <h6 class="h6-tit01">Title H6</h6>
       </div>
-      
+
       <!-- LAST SUB-ITEM -> no-pd -->
       <div class="con-box03 no-pd">
         <h6 class="h6-tit01">Title H6</h6>
@@ -48,7 +57,18 @@
       <h5 class="h5-tit01">Selection criteria</h5>
       <p class="con-p">This is a normal paragraph with bottom padding.</p>
       <!-- LAST con-p ITEM -> no-pd -->
-      <p class="con-p no-pd">This is the final paragraph in the box, so it uses no-pd.</p>
+      <p class="con-p no-pd">
+        This is the final paragraph in the box, so it uses no-pd.
+      </p>
     </div>
   </div>
+
+  <!-- !!! WRONG !!! (SOLE CHILD SURROUNDED BY NOTHING) -->
+  <!-- 
+  <div class="con-box">
+    <div class="con-box02 no-pd">  <- REDUNDANT: No h4 or other tags as peer!
+      <p class="con-p no-pd">Text</p>
+    </div>
+  </div> 
+  -->
 </div>

@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+/* Network Diagram Styles */
+.network-diagram-wrap {
+  width: 100%;
+  margin-top: 40px;
+  padding: 60px 0 100px;
+  background: #fdfdfd;
+  position: relative;
+}
+
+/* Base background glow effects moved here to avoid individual clipping */
+.network-diagram-wrap::before,
+.network-diagram-wrap::after {
+  content: "";
+  position: absolute;
+  width: 614px; /* Much larger to ensure soft edges */
+  height: 614px;
+  pointer-events: none;
+  z-index: 8; /* Above the highlight ring */
+  opacity: 0.15;
+}
+
+.network-diagram-wrap::before {
+  top: -400px;
+  left: -400px;
+  background: radial-gradient(
+    circle,
+    #0a60ff 0%,
+    rgba(10, 96, 255, 0.3) 15%,
+    rgba(10, 96, 255, 0) 35%
+  );
+}
+
+.network-diagram-wrap::after {
+  bottom: -400px;
+  left: -200px;
+  background: radial-gradient(
+    circle,
+    #07b0c3 0%,
+    rgba(7, 176, 195, 0.3) 15%,
+    rgba(7, 176, 195, 0) 35%
+  );
+}
+
+.network-scroll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Above wrap pseudo-elements */
+}
+
+.network-diagram {
+  position: relative;
+  width: 574px; /* (105 center radius + 182 gap) * 2 */
+  height: 574px;
+  min-width: 574px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Full diagram overlay highlight */
+.network-diagram::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  right: -150px;
+  bottom: -150px;
+  background: radial-gradient(
+    circle at center,
+    #d9e6ff 0%,
+    rgba(217, 230, 255, 0.4) 40%,
+    rgba(217, 230, 255, 0) 70%
+  );
+  pointer-events: none;
+  z-index: 9; /* Above corner highlights */
+}
+
+/* Center Highlight Ring - Separated for layering */
+.network-diagram::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 318px; /* 210px node + 108px highlight */
+  height: 318px;
+  background: rgba(10, 96, 255, 0.45);
+  border-radius: 50%;
+  z-index: 5; /* Below the gradients */
+  pointer-events: none;
+}
+
+/* Big blurry background */
+.network-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 85, 255, 0.12) 0%,
+    rgba(0, 85, 255, 0.04) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: -1;
+}
+
+/* White ring - resized to 574px */
+.network-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Center Blue Circle */
+.center-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 210px;
+  background: #005ce6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 20;
+  box-shadow: 0 10px 30px rgba(0, 92, 230, 0.3);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center-node p {
+  position: relative;
+  z-index: 21;
+}
+
+/* Satellite Nodes */
+.node-item {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+.node-circle {
+  width: 148px;
+  height: 148px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+}
+
+.node-circle .img-box {
+  margin-bottom: 10px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.node-circle .img-box img {
+  max-height: 100%;
+}
+
+.node-circle p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  color: #222;
+}
+
+/* Branches container */
+.branches {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.node-item.right .branches {
+  left: 100%;
+}
+
+.node-item.left .branches {
+  right: 100%;
+  flex-direction: row-reverse;
+}
+
+/* Connectors */
+.branch-connector {
+  width: 25px;
+  height: 0;
+  border-top: 2px dotted #aaaaaa;
+  position: relative;
+}
+
+.branch-connector::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #005ce6;
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.node-item.right .branch-connector {
+  margin-right: 0;
+}
+.node-item.right .branch-connector::before {
+  left: -1px;
+}
+
+.node-item.left .branch-connector {
+  margin-left: 0;
+}
+.node-item.left .branch-connector::before {
+  right: -1px;
+}
+
+/* Branch List */
+.branch-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+}
+
+.node-item.right .branch-list {
+  padding-left: 30px;
+}
+.node-item.left .branch-list {
+  padding-right: 30px;
+}
+
+/* Vertical dotted line */
+.branch-list::before {
+  display: none; /* Removed the fixed vertical line */
+}
+
+/* Pills and their connectors */
+.branch-list li {
+  position: relative;
+  background: #e7eefe;
+  color: #011a7a;
+  padding: 8px 15px;
+  border-radius: 99px;
+  white-space: normal; /* Allow wrapping */
+  word-break: keep-all; /* Better wrapping for Korean */
+  min-height: 31px;
+  letter-spacing: -0.5px;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Horizontal line to each pill */
+.branch-list li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 0;
+  border-top: 2px dotted #aaaaaa;
+}
+
+.node-item.right .branch-list li::before {
+  left: -30px;
+  transform: translateY(-50%);
+}
+.node-item.left .branch-list li::before {
+  right: -30px;
+  transform: translateY(-50%);
+}
+
+/* Vertical line segments for each pill - expanded by 4px to cover the 8px gap */
+.branch-list li::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: -4px;
+  width: 0;
+  border-left: 2px dotted #aaaaaa;
+}
+
+.node-item.right .branch-list li::after {
+  left: -30px;
+}
+.node-item.left .branch-list li::after {
+  right: -30px;
+  border-left: none;
+  border-right: 2px dotted #aaaaaa;
+}
+
+/* Connect only from the middle of first and last items */
+.branch-list li:first-child::after {
+  top: 50%;
+}
+.branch-list li:last-child::after {
+  bottom: 50%;
+}
+.branch-list li:only-child::after {
+  display: none;
+}
+
+/* Pills Specific Widths */
+.node02 .branch-list li,
+.node04 .branch-list li,
+.node05 .branch-list li,
+.node07 .branch-list li {
+  width: 236px;
+}
+
+.node03 .branch-list li {
+  width: 193px;
+}
+
+.node06 .branch-list li {
+  width: 181px;
+}
+
+/* Responsive constraints */
+@media screen and (max-width: 1200px) {
+  .network-scroll {
+    justify-content: flex-start;
+    padding-bottom: 20px;
+  }
+  .network-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  .network-scroll::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 10px;
+  }
+  .network-diagram {
+    margin: 0 400px;
+  }
+}
