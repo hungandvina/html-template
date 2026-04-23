@@ -43,6 +43,9 @@ IMPORTANT: Follow these rules strictly for every single task.
 - Do NOT leave `alt=""` unless the image is purely decorative.
 - Leave `src` empty only when no image source is provided and the CMS will replace it later:
   `<img src="" alt="...">`
+- For icon images, the filename in the `src` attribute MUST start with the prefix `ico-`.
+
+
 
 ### [5] RESPONSIVE RULES
 
@@ -58,6 +61,8 @@ IMPORTANT: Follow these rules strictly for every single task.
   - Stack columns vertically when necessary.
   - Prevent horizontal overflow unless explicitly required by the design.
   - Maintain readable typography and balanced whitespace.
+  - When applying responsive styles, the minimum `font-size` must be **14px**. Do NOT use 11px, 12px, or 13px.
+
 
 ### [6] STRUCTURE & SEMANTICS
 
